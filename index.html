@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MYLoan App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="input.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   </head>
+<body>
+
+  <!-- Header -->
+  <header>
+   <div class="logo"><i class="fas fa-coins"></i> LoanApp</div>
+    <!-- <div class="icons">
+      <i class="fas fa-home" onclick="style.color='red'"></i>
+      <i class="fas fa-bell" onclick="style.color='red'"></i>
+      <i class="fas fa-cog" onclick="style.color='red'"></i> -->
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjgJ5SYuDEyohxBgr-kWDPwszCQStq2Iftcg&s" class="profile">
+    
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Get Instant Loans in Minutes</h2>
+    <p>No paperwork. No collateral. Just your phone. Apply and get paid within 5 minutes!</p>
+    <div class="hero-buttons">
+      <button class="btn">Apply Now</button>
+      <button class="btn-outline">Learn More</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h3>Why Choose MyLoan?</h3>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h4>⚡ Fast Approval</h4>
+        <p>Get your loan approved and credited in under 5 minutes.</p>
+      </div>
+      <div class="feature-card">
+        <h4>🛡️ No Collateral</h4>
+        <p>We believe in trust. No assets required to get a loan.</p>
+      </div>
+      <div class="feature-card">
+        <h4>📱 Easy to Use</h4>
+        <p>All you need is your phone. Apply anytime, anywhere.</p>
+      </div>
+    </div>
+  </section>
+<main class="form-section">
+  <title>Interest Calculator</title>
+</head>
+<body>
+
+  <h2>Apply for a Loan</h2>
+    <section class="fform">
+   <input type="name" id="fullname" placeholder="Full name">
+
+  <input type="number" id="principal" placeholder="Amount to Borrow (₦)">
+
+  <input type="number" id="rate" placeholder="Interest Rate (5%)" readonly>
+
+  <select id="time">
+    <option value="">Select Loan Tenure</option>
+    <option value="1">1 year</option>
+    <option value="2">2 years</option>
+    <option value="3">3 years</option>
+    <option value="4">4 years</option>
+    <option value="5">5 years</option>
+  </select><br><br>
+
+  <button onclick="calculateInterest()" class="btn">Calculate Interest</button>
+ <div id="result" style="display: flex;" class="jumm"></div>
+
+    </section>
+
+  </main>
+
+  <script>
+    function calculateInterest() {
+      let principal = document.getElementById("principal").value;
+      let rate = document.getElementById("rate").value;
+      let time = document.getElementById("time").value;
+      let fullname = document.getElementById("fullname").value;
+
+      let interest = (principal * 5 * time) / 100;
+      let totalAmount = Number(principal) + interest;
+      let Amount = Number(principal)  
+
+      if (fullname && principal && time) {
+        result.innerHTML = `
+        <img src="jack.png" style="width: 100px; display: block; position:relative; bottom:20px;">
+          🟢 Success! Loan Sent<br>
+          To: ${fullname}
+          Amount: ₦${Number(principal).toFixed(2)}<br>
+          Date: ${new Date().toDateString()}<br>
+          Kindly check your account balance.<br>
+          Interest: ₦${interest.toFixed(2)}<br>
+          Total Repayment: ₦${totalAmount.toFixed(2)}
+        `;
+        result.style.color = "white";
+      } else {
+        result.textContent = "❌ Failed. Check your input.";
+        result.style.color = "red";
+      }
+    }
+  </script>
+
+  <!-- Ticker -->
+  <div class="ticker">
+    <div class="ticker-text">
+      💰 Apply now and get up to ₦500,000 | 🕒 Instant approval | 🔒 No paperwork | ☎️ 0700-LOAN-APP | 📲 Download on Play Store now!
+    </div>
+  </div>
+  
+</body>
+</html>

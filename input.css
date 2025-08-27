@@ -1,0 +1,213 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: rgb(13, 0, 128);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      width: 100%;
+      border-bottom: 7px solid rgb(23, 0, 128);
+    }
+
+    .btn {
+      background-color: #facc15;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #fef08a;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #e0e0e0;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: black;
+    }
+
+    .features {
+      background: white;
+      color: black;
+      padding: 60px 20px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      margin-top: 60px;
+    }
+
+    .features h3 {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: #f3f4f6;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .feature-card h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .form-section {
+      background: rgb(38, 0, 128);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .form-section h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .fform {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    input, select {
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid #facc15;
+    }
+
+    .form-section button {
+      margin-top: 10px;
+    }
+
+    @media (min-width: 768px) {
+      .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero h2 {
+        font-size: 48px;
+      }
+    }
+
+    .ticker {
+      background-color: rgb(23, 0, 128);
+       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      color: white;
+      padding: 12px 0;
+      overflow: hidden;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+
+    }
+
+    .ticker-text {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: marquee 18s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .jumm{
+      animation: jummi 1.5s infinite;;
+    }
+
+    @keyframes jummi {
+      0%,100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+    .icons{
+      margin-left: 15px;
+       cursor: pointer;
+       color: #4CAF50;
+       font-size: 28px;
+       gap: 40px;
+       display: flex;
+       transition: background 9s;
+    }
+       .logo { color: #11057a;
+         font-weight: bold; 
+         font-size: 28px; }
+
+      .profile {
+      width: 32px;
+       height: 32px; 
+       border-radius: 50%;
+       
+    }
+    
